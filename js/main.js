@@ -49,12 +49,18 @@ function customerCreditScore(nt){
 let slotVal = 
 {
 slot1: [shine , rock , coldBlood , cat , tri, scope , ingot , dagger , lord , lady , jest],
-slot2: slot1.value,
-slot3: slot1.value,
+slot2: [shine , rock , coldBlood , cat , tri, scope , ingot , dagger , lord , lady , jest],
+slot3: [shine , rock , coldBlood , cat , tri, scope , ingot , dagger , lord , lady , jest],
 
 //row1 : slot1[Math.floor(Math.random()*slot1.length)], //random res
 //row2 : slot2[Math.floor(Math.random()*slot2.length)],
 //row3 : slot3[Math.floor(Math.random()*slot3.length)]   << move x1 of these to a seperate function?
+};
+let slotDeval =
+{
+slot1: makeSpace,
+slot2: makeSpace,
+slot3: makeSpace
 }
 // slot1= [shine , rock , coldBlood , cat , tri, scope , ingot , dagger , lord , lady , jest];
 // slot2 = slot1; 
@@ -63,13 +69,19 @@ slot3: slot1.value,
 // let row1 = slot1[Math.floor(Math.random()*slot1.length)]; //random res
 // let row2 = slot2[Math.floor(Math.random()*slot2.length)];
 // let row3 = slot3[Math.floor(Math.random()*slot3.length)];
+function randomVal(slotVal){
+const randSlot1 = slotVal.slot1;
+const randSlot2 = slotVal.slot2;
+const randSlot3 = slotVal.slot3;
 
+return randSlot1 , randSlot2, randSlot3[Math.floor(Math.random()*slot3.length)];
+}
 
 
 //slotOutput = [row1,row2,row3]; //new array with three from above    //pull by name of element, display
 //row1 , row2, row3 = makeSpace;
 
-playBtn.addEventListener("click", function(){  //find a way to refresh or empty arrays
+playBtn.addEventListener("click", ()=>{  //find a way to refresh or empty arrays
 
     if(row1 == row2 && row3){ // triple
         alert("triple");
