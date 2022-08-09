@@ -36,8 +36,8 @@ makeSpace = []; //for resetting length  NOT IMPLEMENTED YET DOES NOT CLEAR
 //if(newTot > 0) // << adding preliminary to check or call a function// will add more or remove
 
 //checking for zero value
-function customerCreditScore(cs){  
-    if(cred = 0){
+function customerCreditScore(nt){  
+    if(nt = 0){
         isPlaying = false;
         alert("OUT OF CREDITS");
     }
@@ -62,7 +62,7 @@ let row3 = slot3[Math.floor(Math.random()*slot3.length)];
 //row1 , row2, row3 = makeSpace;
 
 //
-playBtn.addEventListener("click", function(){  //find a way to refresh or empty arrays
+playBtn.addEventListener("click", ()=>{  //find a way to refresh or empty arrays
 
 
 
@@ -72,7 +72,9 @@ playBtn.addEventListener("click", function(){  //find a way to refresh or empty 
         const newTot = checkVal.reduce((prev, curr) => prev + curr, 0);
         alert(newTot);
         cred.innerHTML = newTot;
-        //customerCreditScore(newTot);
+        customerCreditScore(newTot);
+        //customerCreditScore(newTot);    //auto resets but does not count past one loop
+        
     }
     else if(row1 == row2 || row1 == row3 || row2 == row3){ //double
         alert("double");
@@ -80,6 +82,7 @@ playBtn.addEventListener("click", function(){  //find a way to refresh or empty 
         const newTot = checkVal.reduce((prev, curr) => prev + curr, 0);
         alert(newTot);
         cred.innerHTML = newTot;
+        customerCreditScore(newTot);
         //customerCreditScore(newTot);
         
     }
@@ -89,14 +92,19 @@ playBtn.addEventListener("click", function(){  //find a way to refresh or empty 
         const newTot = checkVal.reduce((prev, curr) => prev + curr, 0);
         alert(newTot);
         cred.innerHTML = newTot;
+        customerCreditScore(newTot);
        // customerCreditScore(newTot);
         //alert(checkVal);
+        
     }
-
+    
 });
 
 
 
 retryBtn.addEventListener("click", function(){
-    
+    if(newTot > 0){
+        alert("yes");
+    }
 });
+
