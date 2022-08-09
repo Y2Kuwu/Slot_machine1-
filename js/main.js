@@ -52,22 +52,27 @@ let updateCred;
 
 
 playBtn.addEventListener("click", function(){  //find a way to refresh or empty arrays
-    const credArray = [1, 5, -1];
+    const credArray = [1, 5, 1];
     
     if(row1 == row2 && row3){ // triple
         alert("triple");
-        return credArray[1];
-       
+        checkVal.push(credArray[1]);
+        const newTot = checkVal.reduce((prev, curr) => prev + curr, initVal);
+        alert(newTot);
     }
     else if(row1 == row2 || row1 == row3 || row2 == row3){ //double
         alert("double");
+        checkVal.push(credArray[0]);
+        const newTot = checkVal.reduce((prev, curr) => prev + curr, initVal);
+        alert(newTot);
         
-        return credArray[0];
     }
     else { //none
         alert("no match");
-        
-        return credArray[2];
+        checkVal.push(credArray[2]);
+        const newTot = checkVal.reduce((prev, curr) => prev + curr, initVal);
+        alert(newTot);
+        //alert(checkVal);
     }
 
 });
