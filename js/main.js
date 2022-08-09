@@ -1,4 +1,6 @@
-let isPlaying = false;
+
+let isPlaying = false;          //bool for player validity
+//button list
 const playBtn = document.getElementById("playButton");
 const retryBtn = document.getElementById("retryButton");
 const quitBtn = document.getElementById("quitButton")
@@ -21,31 +23,26 @@ const jest = document.getElementById("jester");
 //
 
 //setting value tracker as array
-const initVal = cred.append = 5;  //setting initial value
-const checkVal = []; //creating empty array
-const init = checkVal.push(initVal); //pushing initial value 
-alert(checkVal); //alert to check 0 index of array
+const initVal = cred.append = 5;            //setting initial value
+const checkVal = [];                        //creating empty array
+const init = checkVal.push(initVal);        //pushing initial value 
+alert(checkVal);                            //alert to check 0 index of array
 cred.innerHTML = checkVal;
 //
-
-//three identical arrays      //moved into function to set    and reset
-
-
 makeSpace = []; //for resetting length  NOT IMPLEMENTED YET DOES NOT CLEAR
-
-//if(newTot > 0) // << adding preliminary to check or call a function// will add more or remove
-
 //checking for zero value
 function customerCreditScore(nt){  
     if(nt === 0){
         isPlaying = false;
+        
         alert("OUT OF CREDITS");
     }
-    else{
+    else if(nt > 0){
         isPlaying = true;
     }
 }
 function giveSlotVals(){
+//three identical arrays      //moved into function to set    and reset
 slot1 = [shine , rock , coldBlood , cat , tri, scope , ingot , dagger , lord , lady , jest];
 slot2 = slot1;
 slot3 = slot1;
@@ -57,13 +54,11 @@ return row1 , row2, row3;
 }
 
 let give = giveSlotVals();
-
-
 //slotOutput = [row1,row2,row3]; //new array with three from above    //pull by name of element, display
 //row1 , row2, row3 = makeSpace;
 
-playBtn.addEventListener("click", function(){  //find a way to refresh or empty arrays
-give;
+playBtn.addEventListener("click", function(give){  //find a way to refresh or empty arrays
+
     if(row1 == row2 && row3){ // triple
         alert("triple");
         checkVal.push(5);
@@ -88,15 +83,16 @@ give;
         cred.innerHTML = newTot;
         customerCreditScore(newTot);
     }
-    
 });
 
 
 
-// retryBtn.addEventListener("click", ()=>
+retryBtn.addEventListener("click", function(){
 
-//     row1 , row2, row3 = makeSpace;
-// });
+
+s1 =0 ,s2 =0 ,s3 =0; //sets arrays to zero length
+
+});
 
 
 
