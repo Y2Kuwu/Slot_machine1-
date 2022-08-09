@@ -45,50 +45,25 @@ function customerCreditScore(nt){
         isPlaying = true;
     }
 }
+function giveSlotVals(){
+slot1 = [shine , rock , coldBlood , cat , tri, scope , ingot , dagger , lord , lady , jest];
+slot2 = slot1;
+slot3 = slot1;
 
-let slotVal = 
-{
-slot1: [shine , rock , coldBlood , cat , tri, scope , ingot , dagger , lord , lady , jest],
-slot2: [shine , rock , coldBlood , cat , tri, scope , ingot , dagger , lord , lady , jest],
-slot3: [shine , rock , coldBlood , cat , tri, scope , ingot , dagger , lord , lady , jest],
-
-//row1 : slot1[Math.floor(Math.random()*slot1.length)], //random res
-//row2 : slot2[Math.floor(Math.random()*slot2.length)],
-//row3 : slot3[Math.floor(Math.random()*slot3.length)]   << move x1 of these to a seperate function?
-};
-let slotDeval =
-{
-slot1: makeSpace,
-slot2: makeSpace,
-slot3: makeSpace
+row1 = slot1[Math.floor(Math.random()*slot1.length)]; //random res
+row2 = slot2[Math.floor(Math.random()*slot2.length)];
+row3 = slot3[Math.floor(Math.random()*slot3.length)];
+return row1 , row2, row3;
 }
-// slot1= [shine , rock , coldBlood , cat , tri, scope , ingot , dagger , lord , lady , jest];
-// slot2 = slot1; 
-// slot3 = slot1;
 
-// let row1 = slot1[Math.floor(Math.random()*slot1.length)]; //random res
-// let row2 = slot2[Math.floor(Math.random()*slot2.length)];
-// let row3 = slot3[Math.floor(Math.random()*slot3.length)];
-function randomVal(slotVal){
-//const randSlot1 = slotVal.slot1;
-//const randSlot2 = slotVal.slot2;
-//const randSlot3 = slotVal.slot3;
-const slots = Object.values(slotVal);
-
-
-return slots[Math.floor(Math.random()*slots.length)];
-}
+let give = giveSlotVals();
 
 
 //slotOutput = [row1,row2,row3]; //new array with three from above    //pull by name of element, display
 //row1 , row2, row3 = makeSpace;
 
-playBtn.addEventListener("click", ()=>{  //find a way to refresh or empty arrays
-randomVal(slotVal);
-randomVal.slots = row1;
-randomVal.slots = row2;
-randomVal.slots = row3;
-
+playBtn.addEventListener("click", function(){  //find a way to refresh or empty arrays
+give;
     if(row1 == row2 && row3){ // triple
         alert("triple");
         checkVal.push(5);
@@ -96,8 +71,6 @@ randomVal.slots = row3;
         alert(newTot);
         cred.innerHTML = newTot;
         customerCreditScore(newTot);
-        //customerCreditScore(newTot);    //auto resets but does not count past one loop
-        
     }
     else if(row1 == row2 || row1 == row3 || row2 == row3){ //double
         alert("double");
@@ -106,8 +79,6 @@ randomVal.slots = row3;
         alert(newTot);
         cred.innerHTML = newTot;
         customerCreditScore(newTot);
-        //customerCreditScore(newTot);
-        
     }
     else { //none
         alert("no match");
@@ -116,9 +87,6 @@ randomVal.slots = row3;
         alert(newTot);
         cred.innerHTML = newTot;
         customerCreditScore(newTot);
-       // customerCreditScore(newTot);
-        //alert(checkVal);
-        
     }
     
 });
@@ -130,3 +98,42 @@ randomVal.slots = row3;
 //     row1 , row2, row3 = makeSpace;
 // });
 
+
+
+
+
+// let slotVal = 
+// {
+// slot1: [shine , rock , coldBlood , cat , tri, scope , ingot , dagger , lord , lady , jest],
+// slot2: [shine , rock , coldBlood , cat , tri, scope , ingot , dagger , lord , lady , jest],
+// slot3: [shine , rock , coldBlood , cat , tri, scope , ingot , dagger , lord , lady , jest],
+
+// //row1 : slot1[Math.floor(Math.random()*slot1.length)], //random res
+// //row2 : slot2[Math.floor(Math.random()*slot2.length)],
+// //row3 : slot3[Math.floor(Math.random()*slot3.length)]   << move x1 of these to a seperate function?
+// };
+// let slotDeval =
+// {
+// slot1: makeSpace,
+// slot2: makeSpace,
+// slot3: makeSpace
+// }
+// // slot1= [shine , rock , coldBlood , cat , tri, scope , ingot , dagger , lord , lady , jest];
+// // slot2 = slot1; 
+// // slot3 = slot1;
+
+// // let row1 = slot1[Math.floor(Math.random()*slot1.length)]; //random res
+// // let row2 = slot2[Math.floor(Math.random()*slot2.length)];
+// // let row3 = slot3[Math.floor(Math.random()*slot3.length)];
+// function randomVal(slotVal){
+// //const randSlot1 = slotVal.slot1;
+// //const randSlot2 = slotVal.slot2;
+// //const randSlot3 = slotVal.slot3;
+// const slots = Object.values(slotVal);
+
+// return slots[Math.floor(Math.random()*slots.length)];
+// }
+// let forkOver = randomVal();
+// row1 = forkOver;
+// row2 = forkOver;
+// row3 = forkOver;
