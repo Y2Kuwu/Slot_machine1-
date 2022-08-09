@@ -70,11 +70,13 @@ slot3: makeSpace
 // let row2 = slot2[Math.floor(Math.random()*slot2.length)];
 // let row3 = slot3[Math.floor(Math.random()*slot3.length)];
 function randomVal(slotVal){
-const randSlot1 = slotVal.slot1;
-const randSlot2 = slotVal.slot2;
-const randSlot3 = slotVal.slot3;
+//const randSlot1 = slotVal.slot1;
+//const randSlot2 = slotVal.slot2;
+//const randSlot3 = slotVal.slot3;
+const slots = Object.values(slotVal);
 
-return randSlot1 , randSlot2, randSlot3[Math.floor(Math.random()*slot3.length)];
+
+return slots[Math.floor(Math.random()*slots.length)];
 }
 
 
@@ -82,6 +84,10 @@ return randSlot1 , randSlot2, randSlot3[Math.floor(Math.random()*slot3.length)];
 //row1 , row2, row3 = makeSpace;
 
 playBtn.addEventListener("click", ()=>{  //find a way to refresh or empty arrays
+randomVal(slotVal);
+randomVal.slots = row1;
+randomVal.slots = row2;
+randomVal.slots = row3;
 
     if(row1 == row2 && row3){ // triple
         alert("triple");
