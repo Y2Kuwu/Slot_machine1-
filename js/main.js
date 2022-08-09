@@ -28,16 +28,12 @@ alert(checkVal); //alert to check 0 index of array
 cred.innerHTML = checkVal;
 //
 
-//three identical arrays 
-slot1= [shine , rock , coldBlood , cat , tri, scope , ingot , dagger , lord , lady , jest];
-//slot2= [shine , rock , coldBlood , cat , tri, scope , ingot , dagger , lord , lady , jest];
-//slot3= [shine , rock , coldBlood , cat , tri, scope , ingot , dagger , lord , lady , jest];
-slot2 = slot1;
-slot3 = slot1;
+//three identical arrays      //moved into function to set    and reset
+
 
 makeSpace = []; //for resetting length  NOT IMPLEMENTED YET DOES NOT CLEAR
 
-if(newTot > 0) // << adding preliminary to check or call a function// will add more or remove
+//if(newTot > 0) // << adding preliminary to check or call a function// will add more or remove
 
 //checking for zero value
 function customerCreditScore(cs){  
@@ -47,30 +43,36 @@ function customerCreditScore(cs){
     }
     else{
         isPlaying = true;
-    //}
-//}
-//
+        playBtn;
+    }
+}
 
-
-
+slot1= [shine , rock , coldBlood , cat , tri, scope , ingot , dagger , lord , lady , jest];
+slot2 = slot1; 
+slot3 = slot1;
 let row1 = slot1[Math.floor(Math.random()*slot1.length)]; //random res
 let row2 = slot2[Math.floor(Math.random()*slot2.length)];
 let row3 = slot3[Math.floor(Math.random()*slot3.length)];
-slotOutput = [row1,row2,row3]; //new array with three from above    //pull by name of element, display
-    }
-}
+
+
+
+//slotOutput = [row1,row2,row3]; //new array with three from above    //pull by name of element, display
+    
+
 //row1 , row2, row3 = makeSpace;
 
 //
 playBtn.addEventListener("click", function(){  //find a way to refresh or empty arrays
-    
+
+
+
     if(row1 == row2 && row3){ // triple
         alert("triple");
         checkVal.push(5);
         const newTot = checkVal.reduce((prev, curr) => prev + curr, 0);
         alert(newTot);
         cred.innerHTML = newTot;
-        customerCreditScore(newTot);
+        //customerCreditScore(newTot);
     }
     else if(row1 == row2 || row1 == row3 || row2 == row3){ //double
         alert("double");
@@ -78,7 +80,7 @@ playBtn.addEventListener("click", function(){  //find a way to refresh or empty 
         const newTot = checkVal.reduce((prev, curr) => prev + curr, 0);
         alert(newTot);
         cred.innerHTML = newTot;
-        customerCreditScore(newTot);
+        //customerCreditScore(newTot);
         
     }
     else { //none
@@ -87,7 +89,7 @@ playBtn.addEventListener("click", function(){  //find a way to refresh or empty 
         const newTot = checkVal.reduce((prev, curr) => prev + curr, 0);
         alert(newTot);
         cred.innerHTML = newTot;
-        customerCreditScore(newTot);
+       // customerCreditScore(newTot);
         //alert(checkVal);
     }
 
@@ -96,5 +98,5 @@ playBtn.addEventListener("click", function(){  //find a way to refresh or empty 
 
 
 retryBtn.addEventListener("click", function(){
-
+    
 });
