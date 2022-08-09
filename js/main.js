@@ -22,6 +22,7 @@ const initVal = cred.append = 5;  //setting initial value
 const checkVal = []; //creating empty array
 const init = checkVal.push(initVal); //pushing initial value 
 alert(checkVal); //alert to check 0 index of array
+cred.innerHTML = checkVal;
 
 function customerCreditScore(cs){ //for 
     if(cred = 0){
@@ -39,7 +40,7 @@ slot1= [shine , rock , coldBlood , cat , tri, scope , ingot , dagger , lord , la
 slot2= [shine , rock , coldBlood , cat , tri, scope , ingot , dagger , lord , lady , jest];
 slot3= [shine , rock , coldBlood , cat , tri, scope , ingot , dagger , lord , lady , jest];
 
-makeSpace = []; //for resetting
+makeSpace = []; //for resetting length  NOT IMPLEMENTED YET DOES NOT CLEAR
 
 let row1 = slot1[Math.floor(Math.random()*slot1.length)]; //random res
 let row2 = slot2[Math.floor(Math.random()*slot2.length)];
@@ -52,34 +53,33 @@ let updateCred;
 
 
 playBtn.addEventListener("click", function(){  //find a way to refresh or empty arrays
-    const credArray = [1, 5, 1];
     
     if(row1 == row2 && row3){ // triple
         alert("triple");
-        checkVal.push(credArray[1]);
-        const newTot = checkVal.reduce((prev, curr) => prev + curr, initVal);
+        checkVal.push(5);
+        const newTot = checkVal.reduce((prev, curr) => prev + curr, 0);
         alert(newTot);
+        cred.innerHTML = newTot;
     }
     else if(row1 == row2 || row1 == row3 || row2 == row3){ //double
         alert("double");
-        checkVal.push(credArray[0]);
-        const newTot = checkVal.reduce((prev, curr) => prev + curr, initVal);
+        checkVal.push(1);
+        const newTot = checkVal.reduce((prev, curr) => prev + curr, 0);
         alert(newTot);
+        cred.innerHTML = newTot;
         
     }
     else { //none
         alert("no match");
-        checkVal.push(credArray[2]);
-        const newTot = checkVal.reduce((prev, curr) => prev + curr, initVal);
+        checkVal.push(-1);
+        const newTot = checkVal.reduce((prev, curr) => prev + curr, 0);
         alert(newTot);
+        cred.innerHTML = newTot;
         //alert(checkVal);
     }
 
 });
-function counter(){
-    cred.setAttribute("value", 4)
-}
-counter();
+
 
 
 retryBtn.addEventListener("click", function(){
