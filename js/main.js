@@ -18,12 +18,30 @@ const lord = document.getElementById("king");
 const lady = document.getElementById("queen");
 const jest = document.getElementById("jester");
 
+function startBal(cc , plusSub){
+    let newVal;
+    cc += plusSub = newVal;
 
- 
+    return cred.innerHTML = newVal;  //
+}
+//startBal();
+
+function customerCreditScore(cs){
+    if(cred = 0){
+        isPlaying = false;
+        alert("OUT OF CREDITS");
+    }
+    else{
+        isPlaying = true;
+    }
+}
+
 retryBtn.addEventListener("click", function(){
 
 });
 
+for(let play = 0; play < clicked; play++)
+{
 slot1= [shine , rock , coldBlood , cat , tri, scope , ingot , dagger , lord , lady , jest];
 slot2= [shine , rock , coldBlood , cat , tri, scope , ingot , dagger , lord , lady , jest];
 slot3= [shine , rock , coldBlood , cat , tri, scope , ingot , dagger , lord , lady , jest];
@@ -38,18 +56,19 @@ slotOutput = [row1,row2,row3];
 const initVal = cred;
 const credArray = [1, 5, -1];
 const updateCred = [];
+}
 
 playBtn.addEventListener("click", function(){  //find a way to refresh or empty arrays
     if(row1 == row2 && row3){ // triple
         alert("triple");
-        cred.innerHTML = (cred).value + credArray[2];
+        cred.innerHTML = initVal + credArray[2];
     }
     else if(row1 == row2 || row1 == row3 || row2 == row3){ //double
         alert("double");
-        cred.innerHTML = (cred).value + credArray[1];
+        cred.innerHTML = initVal + credArray[1];
     }
     else { //none
         alert("no match");
-        cred.innerHTML = cred + credArray[3];
+        cred.innerHTML = initVal + credArray[3];
     }
 });
