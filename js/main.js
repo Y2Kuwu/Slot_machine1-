@@ -4,7 +4,7 @@ const retryBtn = document.getElementById("retryButton");
 const quitBtn = document.getElementById("quitButton")
 
 //let totCred = document.getElementById("credCounter");
-let cred = document.querySelector(".balance");
+let cred = document.querySelector("#balance");
 
 const shine = document.getElementById("star");
 const rock = document.getElementById("diamond");
@@ -18,18 +18,15 @@ const lord = document.getElementById("king");
 const lady = document.getElementById("queen");
 const jest = document.getElementById("jester");
 
-cred.append(5);
-let newVal = document.createElement("newVal");
-let updatedCred = cred.value + newVal;
-//let windowId = win.open("file:///Users/jamesfox/Desktop/slot_machine_project/Slot_machine1-/index.html");
-//let winClose = 
-
+const initVal = cred.append = 5;  //setting initial value
+const checkVal = []; //creating empty array
+const init = checkVal.push(initVal); //pushing initial value 
+alert(checkVal); //alert to check 0 index of array
 
 function customerCreditScore(cs){ //for 
     if(cred = 0){
         isPlaying = false;
         alert("OUT OF CREDITS");
-        
     }
     else{
         isPlaying = true;
@@ -56,25 +53,57 @@ let updateCred;
 
 playBtn.addEventListener("click", function(){  //find a way to refresh or empty arrays
     const credArray = [1, 5, -1];
+    
     if(row1 == row2 && row3){ // triple
         alert("triple");
-        //newVal = credArray[1];
-        cred.append(cred.value + credArray[1]);
+        return credArray[1];
+       
     }
     else if(row1 == row2 || row1 == row3 || row2 == row3){ //double
         alert("double");
-        //cred.setAttribute("value" + credArray[2]);
-        //newVal = credArray[0];
-        cred.append(cred.value + credArray[0]);
+        
+        return credArray[0];
     }
     else { //none
         alert("no match");
-        //newVal = credArray[2];
-        cred.append(cred -1);
         
+        return credArray[2];
     }
+
 });
+function counter(){
+    cred.setAttribute("value", 4)
+}
+counter();
+
 
 retryBtn.addEventListener("click", function(){
 
 });
+
+
+
+
+
+
+
+
+
+//newVal = credArray[2];
+        //cred.append(cred + 1);
+        //changeVal.value = "4";
+        //cred.value = attribute.value;
+
+
+
+
+        //cred.setAttribute("value" + credArray[2]);
+        //newVal = credArray[0];
+        //cred.append(cred + credArray[count]);
+
+
+
+
+
+         //newVal = credArray[1];
+        //cred.append(cred + credArray[count]);
