@@ -116,7 +116,9 @@
     z-index: 7;
 
 }
-
+#balance{
+    font-size: 80px;
+}
 
 /* .machineBody
 {
