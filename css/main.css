@@ -10,12 +10,12 @@
     margin: 0 auto;
     z-index: 2;
 }
-.colors{
+/* .colors{
     width: 50%;
     height:50%;
     margin: 0 auto;
     z-index: 2;
-}
+} */
 #machineMain {
     
     max-width: 100%;
@@ -36,43 +36,41 @@
     width: 60px;
     height: 60px;
     margin-top: -620px;
-    right: 25px;
+    right: 255px;
     z-index: 2;
 }
 #quitter {
     position:absolute;
-    max-width:7%;
-    max-height: 7%;
-    margin-top: -397px;
-    left: 293px;
-    max-width: 3%;
-    max-height: 3%;
-    z-index: 4;
+    width: 63px;
+    height: 63px;
+    margin-top: -798px;
+    left: 575px;
+    z-index: 6;
 }
 #retry {
+
     position:absolute;
-    
-    margin-top: -431px;
-    left: 294px;
-    max-width: 3%;
-    max-height: 3%;
-    z-index: 4;
+    width: 60px;
+    height: 60px;
+    margin-top: -858px;
+    left: 579px;
+
 }
-#idle1 {
-    position:absolute;
-    
-    margin-top: -640px;
-    left: 325px;
-    max-width: 14%;
-    max-height: 14%;
+#begin{
+    position: absolute;
+    margin-top: -1277.6px;
+    left: 640px;
+    max-width: 27.5%;
+    max-height: 27.5%;
+    z-index: 7;
 }
-#idle2 {
-    position:absolute;
-    
-    margin-top: -640px;
-    left: 325px;
-    max-width: 14%;
-    max-height: 14%;
+#end{
+    position: absolute;
+    margin-top: -1277.6px;
+    left: 640px;
+    max-width: 27.5%;
+    max-height: 27.5%;
+
 }
 #win1 {
     position:absolute;
@@ -95,11 +93,28 @@
 #houseAlwaysWins {
     position:absolute;
     
-    margin-top: -640px;
-    left: 325px;
-    max-width: 14%;
-    max-height: 14%;
+    margin-top: -1277.6px;
+    left: 640px;
+    max-width: 27.5%;
+    max-height: 27.5%;
     
+}
+#quitButton{
+    position:absolute;
+    width: 63px;
+    height: 63px;
+    margin-top: -798px;
+    left: 575px;
+    z-index: 7;
+}
+#retryButton{
+    position:absolute;
+    width: 62px;
+    height: 62px;
+    margin-top: -861px;
+    left: 579px;
+    z-index: 7;
+
 }
 
 
