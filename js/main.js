@@ -24,9 +24,6 @@ retryBtn.addEventListener("click", function(){
 
 });
 
-//retryBtn.addEventListener("click", y);  //init screen
-//quitBtn.addEventListener("click", ); //close page
-
 slot1= [shine , rock , coldBlood , cat , tri, scope , ingot , dagger , lord , lady , jest];
 slot2= [shine , rock , coldBlood , cat , tri, scope , ingot , dagger , lord , lady , jest];
 slot3= [shine , rock , coldBlood , cat , tri, scope , ingot , dagger , lord , lady , jest];
@@ -42,14 +39,6 @@ const initVal = cred;
 const credArray = [1, 5, -1];
 const updateCred = [];
 
-cred.append
-
-
-
-
-
-
-
 playBtn.addEventListener("click", function(){  //find a way to refresh or empty arrays
     if(row1 == row2 && row3){ // triple
         alert("triple");
@@ -57,36 +46,10 @@ playBtn.addEventListener("click", function(){  //find a way to refresh or empty 
     }
     else if(row1 == row2 || row1 == row3 || row2 == row3){ //double
         alert("double");
-        cred.innerHTML = (cred).value + credArray[2];
+        cred.innerHTML = (cred).value + credArray[1];
     }
     else { //none
         alert("no match");
-        cred.innerHTML = cred + credArray[2];
+        cred.innerHTML = cred + credArray[3];
     }
 });
-
-
-
-
-
-// function checkCredits(){
-//     totCred.innerHTML += 1;
-// }
-// function checkForWin(){
-//     //if win totCred.innerHTML
-// }
-// function randSpin(){
-
-// }
-// function winSeq(){
-
-// }
-// function loseSeq(){
-
-// }
-// class symbols{
-
-
-//}
-//symbols:
-//star, eye, snake, pyramid, diamond
