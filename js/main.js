@@ -37,34 +37,39 @@ makeSpace = []; //for resetting length  NOT IMPLEMENTED YET DOES NOT CLEAR
 
 //checking for zero value
 function customerCreditScore(nt){  
-    if(nt = 0){
+    if(nt === 0){
         isPlaying = false;
         alert("OUT OF CREDITS");
     }
     else{
         isPlaying = true;
-        playBtn;
     }
 }
 
-slot1= [shine , rock , coldBlood , cat , tri, scope , ingot , dagger , lord , lady , jest];
-slot2 = slot1; 
-slot3 = slot1;
-let row1 = slot1[Math.floor(Math.random()*slot1.length)]; //random res
-let row2 = slot2[Math.floor(Math.random()*slot2.length)];
-let row3 = slot3[Math.floor(Math.random()*slot3.length)];
+let slotVal = 
+{
+slot1: [shine , rock , coldBlood , cat , tri, scope , ingot , dagger , lord , lady , jest],
+slot2: slot1.value,
+slot3: slot1.value,
+
+//row1 : slot1[Math.floor(Math.random()*slot1.length)], //random res
+//row2 : slot2[Math.floor(Math.random()*slot2.length)],
+//row3 : slot3[Math.floor(Math.random()*slot3.length)]   << move x1 of these to a seperate function?
+}
+// slot1= [shine , rock , coldBlood , cat , tri, scope , ingot , dagger , lord , lady , jest];
+// slot2 = slot1; 
+// slot3 = slot1;
+
+// let row1 = slot1[Math.floor(Math.random()*slot1.length)]; //random res
+// let row2 = slot2[Math.floor(Math.random()*slot2.length)];
+// let row3 = slot3[Math.floor(Math.random()*slot3.length)];
 
 
 
 //slotOutput = [row1,row2,row3]; //new array with three from above    //pull by name of element, display
-    
-
 //row1 , row2, row3 = makeSpace;
 
-//
-playBtn.addEventListener("click", ()=>{  //find a way to refresh or empty arrays
-
-
+playBtn.addEventListener("click", function(){  //find a way to refresh or empty arrays
 
     if(row1 == row2 && row3){ // triple
         alert("triple");
@@ -102,9 +107,8 @@ playBtn.addEventListener("click", ()=>{  //find a way to refresh or empty arrays
 
 
 
-retryBtn.addEventListener("click", function(){
-    if(newTot > 0){
-        alert("yes");
-    }
-});
+// retryBtn.addEventListener("click", ()=>
+
+//     row1 , row2, row3 = makeSpace;
+// });
 
