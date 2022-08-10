@@ -19,7 +19,15 @@
     max-height: 200px;
     z-index: 2;
 }  */
+.boxBg{
+    position: absolute;
+    width: 700px;
+    height: 600px;
+    left: 600px;
+    background-color: black;
+    z-index: -1;
 
+}
 #machineMain {
    position: absolute;
     max-width: 900px;
@@ -83,8 +91,6 @@
     width: 370px;
     margin-top: -78.5px;
     left: 78px;
- 
-    
 } 
 #houseAlwaysWins {
     position:absolute;
@@ -107,16 +113,13 @@
     margin-top: 339px;
     left: 42px;
     z-index: 7;
-
 }
-
-
 #balance{
     position: relative;
     font-family: "Monoton";
     font-size: 80px;
     left: 800px;
-   
+    color: teal;
 }
 #totalCredits{
     position: relative;
@@ -124,9 +127,38 @@
     font-size: 80px;
     left: 600px;
     margin: auto;
-    
+    color: maroon;
+}
+#symNames{
+    position: relative;
+    font-size: 40px;
+    left: 800px;
+    color: teal;
+    z-index: 5;
+
 }
 
+#matchName1{
+    position: relative;
+    font-size: 40px;
+    left: 800px;
+    color: teal;
+    z-index: 5;
+}
+#matchName2{
+    position: relative;
+    font-size: 40px;
+    left: 800px;
+    color: teal;
+    z-index: 5;
+}
+#matchName3{
+    position: relative;
+    font-size: 40px;
+    left: 800px;
+    color: teal;
+    z-index: 5;
+}
 
 
 
