@@ -61,31 +61,36 @@
     left: 42px;
 }
 #begin{
-    position: relative;
-    max-width: 45px;
-    max-height: 45px;
+    position:absolute;
+    width: 54.5px;
+    margin-top: -78.5px;
+    left: 80px;
 }
 #end{
-    position: relative;
-    max-width: 45px;
-    max-height: 45px;
+    position:absolute;
+    width: 54.5px;
+    margin-top: -78.5px;
+    left: 80px;
 }
 #win1 {
-    position:relative;
-    max-width: 45px;
-    max-height: 45px;
+    position:absolute;
+    width: 370px;
+    margin-top: -78.5px;
+    left: 78px;
 } 
 #win2 {
-    position:relative;
-    max-width: 45px;
-    max-height: 45px;
+    position:absolute;
+    width: 370px;
+    margin-top: -78.5px;
+    left: 78px;
  
     
 } 
 #houseAlwaysWins {
-    position:relative;
-    max-width: 45px;
-    max-height: 45px;
+    position:absolute;
+    width: 67px;
+    margin-top: -78.5px;
+    left: 80px;
 }
 #quitButton{
     position:absolute;
