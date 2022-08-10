@@ -28,9 +28,7 @@ const checkVal = [];                        //creating empty array
 const init = checkVal.push(initVal);        //pushing initial value 
 alert(checkVal);                            //alert to check 0 index of array
 cred.innerHTML = checkVal;
-//
-makeSpace = []; //for resetting length  NOT IMPLEMENTED YET DOES NOT CLEAR
-//checking for zero value
+
 function customerCreditScore(nt){  
     if(nt === 0){
         isPlaying = false;
@@ -39,31 +37,53 @@ function customerCreditScore(nt){
     }
     else if(nt > 0){
         isPlaying = true;
+        
     }
 }
 function giveSlotVals(){
 //three identical arrays      //moved into function to set    and reset
-slot1 = [shine , rock , coldBlood , cat , tri, scope , ingot , dagger , lord , lady , jest];
-slot2 = slot1;
-slot3 = slot1;
 
-row1 = slot1[Math.floor(Math.random()*slot1.length)]; //random res
+slot1 = [];
+slot1.push(shine , rock , coldBlood , cat , tri, scope , ingot , dagger , lord , lady , jest);
+slot2 = [];
+slot2.push(shine , rock , coldBlood , cat , tri, scope , ingot , dagger , lord , lady , jest);
+slot3 = [];
+slot3.push(shine , rock , coldBlood , cat , tri, scope , ingot , dagger , lord , lady , jest);
+
+
+
+return slot1 , slot2, slot3;
+//row1 = 0, row2 = 0 , row3 = 0;
+
+}
+let give = giveSlotVals();
+let setter = set();
+let resetter = reset();
+
+function set(){
+row1 = slot1[Math.floor(Math.random()*slot1.length)]; 
 row2 = slot2[Math.floor(Math.random()*slot2.length)];
 row3 = slot3[Math.floor(Math.random()*slot3.length)];
 return row1 , row2, row3;
 }
+function reset(){
+    row1 = slot1 = [];
+    row2 = slot2 = [];
+    row2 = slot3= [];
+    return row1 , row2, row3;
+}
 
-let give = giveSlotVals();
+
 //slotOutput = [row1,row2,row3]; //new array with three from above    //pull by name of element, display
 //row1 , row2, row3 = makeSpace;
 
-playBtn.addEventListener("click", function(give){  //find a way to refresh or empty arrays
-
+playBtn.addEventListener("click", ()=>{  //find a way to refresh or empty arrays
+reset();
+set();
     if(row1 == row2 && row3){ // triple
         alert("triple");
         checkVal.push(5);
         const newTot = checkVal.reduce((prev, curr) => prev + curr, 0);
-        alert(newTot);
         cred.innerHTML = newTot;
         customerCreditScore(newTot);
     }
@@ -71,7 +91,6 @@ playBtn.addEventListener("click", function(give){  //find a way to refresh or em
         alert("double");
         checkVal.push(1);
         const newTot = checkVal.reduce((prev, curr) => prev + curr, 0);
-        alert(newTot);
         cred.innerHTML = newTot;
         customerCreditScore(newTot);
     }
@@ -79,57 +98,11 @@ playBtn.addEventListener("click", function(give){  //find a way to refresh or em
         alert("no match");
         checkVal.push(-1);
         const newTot = checkVal.reduce((prev, curr) => prev + curr, 0);
-        alert(newTot);
         cred.innerHTML = newTot;
         customerCreditScore(newTot);
     }
 });
 
-
-
 retryBtn.addEventListener("click", function(){
-
-
-s1 =0 ,s2 =0 ,s3 =0; //sets arrays to zero length
-
+        
 });
-
-
-
-
-
-// let slotVal = 
-// {
-// slot1: [shine , rock , coldBlood , cat , tri, scope , ingot , dagger , lord , lady , jest],
-// slot2: [shine , rock , coldBlood , cat , tri, scope , ingot , dagger , lord , lady , jest],
-// slot3: [shine , rock , coldBlood , cat , tri, scope , ingot , dagger , lord , lady , jest],
-
-// //row1 : slot1[Math.floor(Math.random()*slot1.length)], //random res
-// //row2 : slot2[Math.floor(Math.random()*slot2.length)],
-// //row3 : slot3[Math.floor(Math.random()*slot3.length)]   << move x1 of these to a seperate function?
-// };
-// let slotDeval =
-// {
-// slot1: makeSpace,
-// slot2: makeSpace,
-// slot3: makeSpace
-// }
-// // slot1= [shine , rock , coldBlood , cat , tri, scope , ingot , dagger , lord , lady , jest];
-// // slot2 = slot1; 
-// // slot3 = slot1;
-
-// // let row1 = slot1[Math.floor(Math.random()*slot1.length)]; //random res
-// // let row2 = slot2[Math.floor(Math.random()*slot2.length)];
-// // let row3 = slot3[Math.floor(Math.random()*slot3.length)];
-// function randomVal(slotVal){
-// //const randSlot1 = slotVal.slot1;
-// //const randSlot2 = slotVal.slot2;
-// //const randSlot3 = slotVal.slot3;
-// const slots = Object.values(slotVal);
-
-// return slots[Math.floor(Math.random()*slots.length)];
-// }
-// let forkOver = randomVal();
-// row1 = forkOver;
-// row2 = forkOver;
-// row3 = forkOver;
