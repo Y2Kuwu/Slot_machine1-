@@ -1,46 +1,47 @@
 .machineBody{
-    width: 45%;
-    height:45%;
+    position: absolute;
+    max-width: 600px;
+    max-height: 600px;
     margin: 0 auto;
     z-index: 1;
 }
 .funcButtons{
-    width: 45%;
-    height:45%;
+    position: absolute;
     margin: 0 auto;
+    max-width: 200px;
+    max-height: 200px;
     z-index: 2;
 }
-/* .colors{
+.colors{
     width: 50%;
     height:50%;
     margin: 0 auto;
     z-index: 2;
-} */
+} 
 #machineMain {
-    
-    max-width: 100%;
-    max-height: 100%;
+    position: absolute;
     z-index: 1;
+    object-fit: scale-down;
+    max-width: 800px;
+    max-height: 800px;
+    
 }
 #play{
-    position:absolute;
-    max-width: 5%;
-    max-height: 5%;
-    margin-top: -620px;
-    right: 262px;
+    position:relative;
+    max-width: 45px;
+    max-height: 45px;
     z-index: 1;
     
 }
 #playButton{
-    position:absolute;
+    position:relative;
     width: 60px;
     height: 60px;
-    margin-top: -620px;
-    right: 255px;
+   
     z-index: 2;
 }
 #quitter {
-    position:absolute;
+    position:relative;
     width: 63px;
     height: 63px;
     margin-top: -798px;
@@ -57,62 +58,44 @@
 
 }
 #begin{
-    position: absolute;
-    margin-top: -1277.6px;
-    left: 640px;
-    max-width: 27.5%;
-    max-height: 27.5%;
-    z-index: 7;
+    position: relative;
+    
 }
 #end{
-    position: absolute;
-    margin-top: -1277.6px;
-    left: 640px;
-    max-width: 27.5%;
-    max-height: 27.5%;
+    position: relative;
+   
 
 }
 #win1 {
-    position:absolute;
+    position:relative;
     
-    margin-top: -638px;
-    left: 325px;
-    max-width: 29.5%;
-    max-height: 29.5%;
+
     
 } 
 #win2 {
-    position:absolute;
+    position:relative;
     
-    margin-top: -640px;
-    left: 325px;
-    max-width: 29.5%;
-    max-height: 29.5%;
+ 
     
 } 
 #houseAlwaysWins {
-    position:absolute;
+    position:relative;
     
-    margin-top: -1277.6px;
-    left: 640px;
-    max-width: 27.5%;
-    max-height: 27.5%;
+    
     
 }
 #quitButton{
-    position:absolute;
+    position:relative;
     width: 63px;
     height: 63px;
-    margin-top: -798px;
-    left: 575px;
+   
     z-index: 7;
 }
 #retryButton{
-    position:absolute;
+    position:relative;
     width: 62px;
     height: 62px;
-    margin-top: -861px;
-    left: 579px;
+   
     z-index: 7;
 
 }
@@ -120,131 +103,6 @@
     font-size: 80px;
 }
 
-/* .machineBody
-{
-    position: relative;
-    margin-top: 60px;
-}
-
-h1{
-width: 600px;
-height: 300px;
-top: -20px;
-border-top-left-radius: 10px;
-border-top-right-radius: 10px;
-background-color: rgb(121, 115, 115);
-margin: 0 auto;
-z-index: 4;
-}
-
-#row1
-{
-    position: relative;
-    border-radius: 20px;
-    width: 100px;
-    height: 200px;
-    top: 60px;
-    left: -120px;
-    margin: 0 auto;
-    z-index: 3;
-    background-color: antiquewhite;
-}
-#row2
-{
-    position: relative;
-    border-radius: 20px;
-    width: 100px;
-    height: 200px;
-    top: -140px;
-    left: 0px;
-    margin: 0 auto;
-    z-index: 3;
-    background-color: antiquewhite;
-}
-#row3
-{
-    position: relative;
-    border-radius: 20px;
-    width: 100px;
-    height: 200px;
-    top: -340px;
-    left: 120px;
-    margin: 0 auto;
-    z-index: 3;
-    background-color: antiquewhite;
-    
-}
-
-#screenBody{
-    position: relative;
-    border-radius: 10px;
-    width: 370px;
-    height: 230px;
-    margin: 0 auto;
-    margin-top: 20px;
-    right: 0px;
-    top: -555px;
-    background-color: black;
-    z-index: 2;
-    }
-    #sidePanelRight{
-    position: relative;
-    border-radius: 10px;
-    width: 100px;
-    height: 230px;
-    margin: 0 auto;
-    right: 260px;
-    top: -1070px;
-    z-index: 4;
-    background-color: black;
-    }
-    #sidePanelLeft{
-        position: relative;
-        border-radius: 10px;
-        width: 100px;
-        height: 230px;
-        margin: 0 auto;
-        right: -220px;
-        top: -1300px;
-        z-index: 4;
-        background-color: black;
-        }
-        #machineBodyRear{
-            position: relative;
-            width: 680px;
-            height: 800px;
-            margin: 0 auto;
-            right: 0px;
-            top: -300px;
-            background-color: rgb(65, 24, 24);
-            z-index: -1;
-            }
-    /* .credTracker{
-        margin-top: -20px;
-        background-color: aquamarine;
-        width: 200px;
-        height: 200px;
-        z-index: 1;
-    } */
-    /* #creditCount{
-        list-style: none;
-        margin-top: -200px;
-        width: 120px;
-        height: 60px;
-        background-color: green;
-        z-index: 2;
-    } */ 
-
-
-    /* #coinsOuty{   //make this coins out for win
-        position: relative;
-        width: 350px;
-        height: 220px;
-        margin: 0 auto;
-        right: 0px;
-        top: -px;
-        background-color: rgb(225, 203, 175);
-        } */
 
 
 
