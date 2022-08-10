@@ -1,5 +1,5 @@
 
-let isPlaying = false;          //bool for player validity
+//let isPlaying = false;          //bool for player validity
 //button list
 const playBtn = document.getElementById("playButton");
 const retryBtn = document.getElementById("retryButton");
@@ -21,6 +21,9 @@ const lord = document.getElementById("king");
 const lady = document.getElementById("queen");
 const jest = document.getElementById("jester");
 //
+let row1;
+let row2;
+let row3;
 
 //setting value tracker as array
 const initVal = cred.append = 5;            //setting initial value
@@ -29,57 +32,33 @@ const init = checkVal.push(initVal);        //pushing initial value
 alert(checkVal);                            //alert to check 0 index of array
 cred.innerHTML = checkVal;
 
+
+
+
 function customerCreditScore(nt){  
     if(nt === 0){
-        isPlaying = false;
-        
+     
         alert("OUT OF CREDITS");
     }
-    else if(nt > 0){
-        isPlaying = true;
-        
+    else if(nt !== 0){
     }
 }
-function giveSlotVals(){
-//three identical arrays      //moved into function to set    and reset
-
-slot1 = [];
-slot1.push(shine , rock , coldBlood , cat , tri, scope , ingot , dagger , lord , lady , jest);
-slot2 = [];
-slot2.push(shine , rock , coldBlood , cat , tri, scope , ingot , dagger , lord , lady , jest);
-slot3 = [];
-slot3.push(shine , rock , coldBlood , cat , tri, scope , ingot , dagger , lord , lady , jest);
-
-
-
-return slot1 , slot2, slot3;
-//row1 = 0, row2 = 0 , row3 = 0;
-
+const ops = {
+r1 : [shine , rock , coldBlood , cat , tri, scope , ingot , dagger , lord , lady , jest],  //created object to contain 3 identical
+r2 : [shine , rock , coldBlood , cat , tri, scope , ingot , dagger , lord , lady , jest],
+r3 : [shine , rock , coldBlood , cat , tri, scope , ingot , dagger , lord , lady , jest]
+};
+function randSlots(){
+    row1 = ops["r1"][Math.floor(Math.random()*ops["r1"].length)]; //calling by random
+    row2 = ops["r2"][Math.floor(Math.random()*ops["r2"].length)];
+    row3 = ops["r3"][Math.floor(Math.random()*ops["r3"].length)];
+    return row1 , row2 , row3;
 }
-let give = giveSlotVals();
-let setter = set();
-let resetter = reset();
+let randGive = randSlots(); // making universal 
 
-function set(){
-row1 = slot1[Math.floor(Math.random()*slot1.length)]; 
-row2 = slot2[Math.floor(Math.random()*slot2.length)];
-row3 = slot3[Math.floor(Math.random()*slot3.length)];
-return row1 , row2, row3;
-}
-function reset(){
-    row1 = slot1 = [];
-    row2 = slot2 = [];
-    row2 = slot3= [];
-    return row1 , row2, row3;
-}
-
-
-//slotOutput = [row1,row2,row3]; //new array with three from above    //pull by name of element, display
-//row1 , row2, row3 = makeSpace;
 
 playBtn.addEventListener("click", ()=>{  //find a way to refresh or empty arrays
-reset();
-set();
+randSlots();
     if(row1 == row2 && row3){ // triple
         alert("triple");
         checkVal.push(5);
@@ -103,6 +82,10 @@ set();
     }
 });
 
-retryBtn.addEventListener("click", function(){
+// retryBtn.addEventListener("click", function(){
         
-});
+// });
+
+// quitBtn.addEventListener("click", function(){
+
+// });
