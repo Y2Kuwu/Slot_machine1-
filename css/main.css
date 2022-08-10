@@ -1,55 +1,64 @@
-.machineBody{
-    position: absolute;
-    margin: auto;
-    z-index: 1;
-}
-.funcButtons{
-    position: absolute;
-    margin: auto;
-    max-width: 200px;
-    max-height: 200px;
-    z-index: 2;
-}
-.colors{
-    position: absolute;
-    margin: auto;
-    max-width: 200px;
-    max-height: 200px;
-    z-index: 2;
-} 
-#machineMain {
+/* body{
     position: relative;
+    margin: auto;
     z-index: 1;
-    object-fit: scale-down;
-    max-width: 800px;
-    max-height: 800px;
+    margin-left: auto;
+    margin-right: auto;
+} */
+/* .funcButtons{
+    position: absolute;
+    margin: auto;
+    max-width: 200px;
+    max-height: 200px;
+    z-index: 2;
+} */
+/* .colors{
+    position: absolute;
+    margin: auto;
+    max-width: 200px;
+    max-height: 200px;
+    z-index: 2;
+}  */
+
+#machineMain {
+   position: absolute;
+    max-width: 900px;
+    max-height: 900px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    
 }
-#play{
+/* #play{
     position:relative;
     max-width: 45px;
     max-height: 45px;
-    right: 0px;
+    left: 40px;
     z-index: 1;
     
-}
+} */
 #playButton{
     position:relative;
     width: 60px;
     height: 60px;
-   
+    left: 505px;
+    margin-top: 80px;
     z-index: 2;
 }
 #quitter {
-    position:relative;
+    position:absolute;
     width: 40px;
     height: 40px;
-    z-index: 6;
+    margin-top: 380px;
+    left: 40px;
 }
-#retry {
+#hackz {
 
     position:absolute;
     width: 40px;
     height: 40px;
+    margin-top: 339px;
+    left: 42px;
 }
 #begin{
     position: relative;
@@ -79,21 +88,38 @@
     max-height: 45px;
 }
 #quitButton{
-    position:relative;
-    width: 60px;
-    height: 60px;
+    position:absolute;
+    width: 40px;
+    height: 40px;
+    margin-top: 380px;
+    left: 40px;
     z-index: 7;
 }
 #cheatButton{
-    position:relative;
-    width: 60px;
-    height: 60px;
+    position:absolute;
+    width: 40px;
+    height: 40px;
+    margin-top: 339px;
+    left: 42px;
     z-index: 7;
 
 }
+
+
 #balance{
+    position: relative;
     font-family: "Monoton";
     font-size: 80px;
+    left: 800px;
+   
+}
+#totalCredits{
+    position: relative;
+    font-family: "Monoton";
+    font-size: 80px;
+    left: 600px;
+    margin: auto;
+    
 }
 
 

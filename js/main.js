@@ -52,8 +52,10 @@ function randSlots(){
     row1 = ops["r1"][Math.floor(Math.random()*ops["r1"].length)]; //calling by random
     row2 = ops["r2"][Math.floor(Math.random()*ops["r2"].length)];
     row3 = ops["r3"][Math.floor(Math.random()*ops["r3"].length)];
+    console.log(row1,row2,row3);
     return row1 , row2 , row3;
 }
+
 let randGive = randSlots(); // making universal 
 
 
@@ -82,9 +84,9 @@ randSlots();
     }
 });
 
-// cheater.addEventListener("click", function(){
-        
-// });
+cheater.addEventListener("click", function(){ //allows for loss without point reduction
+        checkVal.push(1);
+});
 
 // quitBtn.addEventListener("click", function(){
 
