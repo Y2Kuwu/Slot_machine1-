@@ -1,35 +1,34 @@
 .machineBody{
     position: absolute;
-    max-width: 600px;
-    max-height: 600px;
-    margin: 0 auto;
+    margin: auto;
     z-index: 1;
 }
 .funcButtons{
     position: absolute;
-    margin: 0 auto;
+    margin: auto;
     max-width: 200px;
     max-height: 200px;
     z-index: 2;
 }
 .colors{
-    width: 50%;
-    height:50%;
-    margin: 0 auto;
+    position: absolute;
+    margin: auto;
+    max-width: 200px;
+    max-height: 200px;
     z-index: 2;
 } 
 #machineMain {
-    position: absolute;
+    position: relative;
     z-index: 1;
     object-fit: scale-down;
     max-width: 800px;
     max-height: 800px;
-    
 }
 #play{
     position:relative;
     max-width: 45px;
     max-height: 45px;
+    right: 0px;
     z-index: 1;
     
 }
@@ -42,64 +41,58 @@
 }
 #quitter {
     position:relative;
-    width: 63px;
-    height: 63px;
-    margin-top: -798px;
-    left: 575px;
+    width: 40px;
+    height: 40px;
     z-index: 6;
 }
 #retry {
 
     position:absolute;
-    width: 60px;
-    height: 60px;
-    margin-top: -858px;
-    left: 579px;
-
+    width: 40px;
+    height: 40px;
 }
 #begin{
     position: relative;
-    
+    max-width: 45px;
+    max-height: 45px;
 }
 #end{
     position: relative;
-   
-
+    max-width: 45px;
+    max-height: 45px;
 }
 #win1 {
     position:relative;
-    
-
-    
+    max-width: 45px;
+    max-height: 45px;
 } 
 #win2 {
     position:relative;
-    
+    max-width: 45px;
+    max-height: 45px;
  
     
 } 
 #houseAlwaysWins {
     position:relative;
-    
-    
-    
+    max-width: 45px;
+    max-height: 45px;
 }
 #quitButton{
     position:relative;
-    width: 63px;
-    height: 63px;
-   
+    width: 60px;
+    height: 60px;
     z-index: 7;
 }
-#retryButton{
+#cheatButton{
     position:relative;
-    width: 62px;
-    height: 62px;
-   
+    width: 60px;
+    height: 60px;
     z-index: 7;
 
 }
 #balance{
+    font-family: "Monoton";
     font-size: 80px;
 }
 

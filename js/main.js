@@ -2,7 +2,7 @@
 //let isPlaying = false;          //bool for player validity
 //button list
 const playBtn = document.getElementById("playButton");
-const retryBtn = document.getElementById("retryButton");
+const cheater = document.getElementById("cheatButton");
 const quitBtn = document.getElementById("quitButton")
 
 //let totCred = document.getElementById("credCounter");
@@ -32,13 +32,13 @@ const init = checkVal.push(initVal);        //pushing initial value
 alert(checkVal);                            //alert to check 0 index of array
 cred.innerHTML = checkVal;
 
-
+let spareSomeChange = "OUT OF CREDITS";  // make into element
 
 
 function customerCreditScore(nt){  
     if(nt === 0){
-     
-        alert("OUT OF CREDITS");
+        
+        alert(spareSomeChange);
     }
     else if(nt !== 0){
     }
@@ -82,7 +82,7 @@ randSlots();
     }
 });
 
-// retryBtn.addEventListener("click", function(){
+// cheater.addEventListener("click", function(){
         
 // });
 
