@@ -10,7 +10,7 @@ let cred = document.querySelector("#balance");
 let m1 = document.querySelector("#matchName1");
 let m2 = document.querySelector("#matchName2");
 let m3 = document.querySelector("#matchName3");
-let symList = document.querySelector("#symNames")
+
 
 //attached symbols to be called/checked
 const shine = document.getElementById("star");
@@ -32,7 +32,7 @@ let show1;
 let show2;
 let show3;
 
-
+let rowManager;
 
 //setting value tracker as array
 const initVal = cred.append = 5;            //setting initial value
@@ -65,17 +65,22 @@ function randSlots(){
     row2 = ops["r2"][Math.floor(Math.random()*ops["r2"].length)];
     row3 = ops["r3"][Math.floor(Math.random()*ops["r3"].length)];
     //console.log(row1,row2,row3);    //to show match names in pres
+    rowManager = [row1 , row2 , row3];
     return row1 , row2 , row3;
 }
 
 let randGive = randSlots(); // making universal 
 
-let rowManager = [row1 , row2, row3];
-let showSyms = rowManager.map(show => {
-let li = document.createElement("li");  //createLiX3
-li.textContent = show;
-return li;
-});
+
+let symList = document.querySelector("#symNames");
+let l = document.createElement("li");
+symList.append(rowManager[0], l);
+
+// let showSyms = rowManager.map(show => {
+// let li = document.createElement("li");  //createLiX3
+// li.textContent = show;
+// return li;
+// });
 //rowManager.append();
 
 playBtn.addEventListener("click", ()=>{  //find a way to refresh or empty arrays
