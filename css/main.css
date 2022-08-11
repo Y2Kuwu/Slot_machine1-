@@ -1,37 +1,7 @@
-/* body{
+.machineBody{
     position: relative;
-    margin: auto;
-    z-index: 1;
-    margin-left: auto;
-    margin-right: auto;
-} */
-/* .funcButtons{
-    position: absolute;
-    margin: auto;
-    max-width: 200px;
-    max-height: 200px;
-    z-index: 2;
-} */
-/* .colors{
-    position: absolute;
-    margin: auto;
-    max-width: 200px;
-    max-height: 200px;
-    z-index: 2;
-}  */
-
-
-
-
-/* .boxBg{
-    position: absolute;
-    width: 700px;
-    height: 600px;
-    left: 600px;
-    background-color: black;
-    z-index: -1;
-
-} */
+    align-items: center;
+}
 #machineMain {
    position: absolute;
     max-width: 900px;
@@ -39,19 +9,12 @@
     display: block;
     margin-left: auto;
     margin-right: auto;
-    z-index: 2;
-    
 }
-/* #play{
-    position:relative;
-    max-width: 45px;
-    max-height: 45px;
-    left: 40px;
-    z-index: 1;
-    
-} */
+
 #playButton{
     position:relative;
+    background: transparent;
+    border: none !important;
     width: 60px;
     height: 60px;
     left: 505px;
@@ -73,6 +36,7 @@
     height: 40px;
     margin-top: 339px;
     left: 42px;
+    z-index: 3;
 }
 #begin{                     
     
@@ -115,6 +79,8 @@
 }
 #quitButton{
     position:absolute;
+    background: transparent;
+    border: none !important;
     width: 40px;
     height: 40px;
     margin-top: 380px;
@@ -123,6 +89,8 @@
 }
 #cheatButton{
     position:absolute;
+    background: transparent;
+    border: none !important;
     width: 40px;
     height: 40px;
     margin-top: 339px;
@@ -145,15 +113,100 @@
     color: maroon;
 }
 #symNames{
+
     position: relative;
     font-size: 40px;
     left: 800px;
     color: teal;
     z-index: 5;
-
+    margin-top: 180px;
 }
 
-#matchName1{
+#star1{
+    position:absolute;
+    margin-top: -460px;
+    width: 50px;
+    left: 150px;
+    z-index: 2;
+}
+#diamond1{
+    position:absolute;
+    margin-top: -460px;
+    width: 50px;
+    left: 150px;
+    z-index: 2;
+}
+#snake1{
+    position:absolute;
+    margin-top: -460px;
+    width: 50px;
+    left: 150px;
+    z-index: 2;
+}
+#pyramid1{
+    position:absolute;
+    margin-top: -460px;
+    width: 50px;
+    left: 150px;
+    z-index: 2;
+}
+#goldBar1{
+    position:absolute;
+    margin-top: -460px;
+    width: 50px;
+    left: 150px;
+    z-index: 2;
+}
+#knife1{
+    position:absolute;
+    margin-top: -460px;
+    width: 50px;
+    left: 150px;
+    z-index: 2;
+}
+#openSlot1{
+    position:absolute;
+    margin-top: -460px;
+    width: 50px;
+    height: 50px;
+    left: 150px;
+    background-color: black;
+    z-index: 4;
+}
+
+#openSlot2{
+    position:absolute;
+    margin-top: -460px;
+    width: 50px;
+    height: 50px;
+    left: 238px;
+    background-color: blue;
+    z-index: 4;
+}
+#openSlot3{
+    position:absolute;
+    height: 50px;
+    width: 50px;
+    margin-top: -460px;
+    left: 324px;
+    background-color: red;
+    z-index: 4;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* #matchName1{
     position: relative;
     font-size: 40px;
     left: 800px;
@@ -173,32 +226,54 @@
     left: 800px;
     color: teal;
     z-index: 5;
-}
-#star1{
-    position:absolute;
-    margin-top: -460px;
-    width: 50px;
-    left: 150px;
+} */
+
+
+
+
+
+/* #play{
+    position:relative;
+    max-width: 45px;
+    max-height: 45px;
+    left: 40px;
+    z-index: 1;
+    
+} */
+
+
+
+/* body{
+    position: relative;
+    margin: auto;
+    z-index: 1;
+    margin-left: auto;
+    margin-right: auto;
+} */
+/* .funcButtons{
+    position: absolute;
+    margin: auto;
+    max-width: 200px;
+    max-height: 200px;
     z-index: 2;
-}
-#openSlot2{
-    position:absolute;
-    height: 50px;
-    width: 50px;
-    margin-top: -2874px;
-    left: 238px;
+} */
+/* .colors{
+    position: absolute;
+    margin: auto;
+    max-width: 200px;
+    max-height: 200px;
+    z-index: 2;
+}  */
+
+
+
+
+/* .boxBg{
+    position: absolute;
+    width: 700px;
+    height: 600px;
+    left: 600px;
     background-color: black;
-    z-index: 3;
-}
-#openSlot3{
-    position:absolute;
-    height: 50px;
-    width: 50px;
-    margin-top: -2874px;
-    left: 324px;
-    background-color: red;
-    z-index: 4;
-}
+    z-index: -1;
 
-
-
+} */

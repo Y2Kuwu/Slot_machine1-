@@ -7,9 +7,9 @@ const quitBtn = document.getElementById("quitButton")
 
 //let totCred = document.getElementById("credCounter");
 let cred = document.querySelector("#balance");
-let m1 = document.querySelector("#matchName1");
-let m2 = document.querySelector("#matchName2");
-let m3 = document.querySelector("#matchName3");
+let os1 = document.querySelector("#openSlot1");
+let os2 = document.querySelector("#openSlot2");
+let os3 = document.querySelector("#openSlot3");
 
 
 //attached symbols to be called/checked
@@ -25,14 +25,25 @@ const lord = document.getElementById("king");
 const lady = document.getElementById("queen");
 const jest = document.getElementById("jester");
 //
+//img files
+const shine1 = document.getElementById("star1");
+const rock1 = document.getElementById("diamond1");
+const coldBlood1 = document.getElementById("snake1");
+const cat1 = document.getElementById("sphnix1");
+const tri1 = document.getElementById("pyramid1");
+const scope1 = document.getElementById("eye1");
+const ingot1 = document.getElementById("goldBar1");
+const dagger1 = document.getElementById("knife1");
+const lord1 = document.getElementById("king1");
+const lady1 = document.getElementById("queen1");
+const jest1 = document.getElementById("jester1");
+//
 let row1;
 let row2;
 let row3;
-let show1;
-let show2;
-let show3;
 
-let rowManager;
+
+//img.
 
 //setting value tracker as array
 const initVal = cred.append = 5;            //setting initial value
@@ -58,23 +69,32 @@ function customerCreditScore(nt){
 const ops = {
 r1 : [shine , rock , coldBlood , cat , tri, scope , ingot , dagger , lord , lady , jest],  //created object to contain 3 identical
 r2 : [shine , rock , coldBlood , cat , tri, scope , ingot , dagger , lord , lady , jest],
-r3 : [shine , rock , coldBlood , cat , tri, scope , ingot , dagger , lord , lady , jest]
+r3 : [shine , rock , coldBlood , cat , tri, scope , ingot , dagger , lord , lady , jest],
+r_1: ["shine" , "rock" , "coldBlood" , "cat" , "tri" , "scope" , "ingot" , "dagger" , "lord" , "lady" , "jest"],
+//r_2: ["shine" , "rock" , "coldBlood" , "cat" , "tri" , "scope" , "ingot" , "dagger" , "lord" , "lady" , "jest"],
+//r_3: ["shine" , "rock" , "coldBlood" , "cat" , "tri" , "scope" , "ingot" , "dagger" , "lord" , "lady" , "jest"],
+
 };
 function randSlots(){
     row1 = ops["r1"][Math.floor(Math.random()*ops["r1"].length)]; //calling by random
     row2 = ops["r2"][Math.floor(Math.random()*ops["r2"].length)];
     row3 = ops["r3"][Math.floor(Math.random()*ops["r3"].length)];
     //console.log(row1,row2,row3);    //to show match names in pres
-    rowManager = [row1 , row2 , row3];
     return row1 , row2 , row3;
 }
 
 let randGive = randSlots(); // making universal 
 
+function makeSymbolVis(r1){
+    
+    r1 = ops.r1.indexOf(row1);
+    alert(r1);
+    alert(ops.r_1[r1]);
 
-let symList = document.querySelector("#symNames");
-let l = document.createElement("li");
-symList.append(rowManager[0], l);
+    //const rowReplace1 = document.createElement("img");
+    //rowReplace1.src = ""
+}
+makeSymbolVis(row1);
 
 // let showSyms = rowManager.map(show => {
 // let li = document.createElement("li");  //createLiX3
@@ -107,7 +127,6 @@ randSlots();
         customerCreditScore(newTot);
     }
 });
-
 cheater.addEventListener("click", function(){ //allows for loss without point reduction
         checkVal.push(1);
 });
