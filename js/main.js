@@ -1,5 +1,6 @@
 
 
+
 //button list
 const playBtn = document.getElementById("playButton");
 const cheater = document.getElementById("cheatButton");
@@ -115,7 +116,8 @@ function makeSymbolVis(r1, r2, r3){
     //alert(ops.r_1[r2]);
     //alert(ops.r_1[r3]);
    // os2.setAttribute("style", "background-color:red;");
-    alert(ops.r_1[r2]);  //now grabbing by link
+
+    alert(ops.r_1[r2]);  //now grabbing by link name
 
 
     // const img2 = new Image(50,50);
@@ -124,16 +126,32 @@ function makeSymbolVis(r1, r2, r3){
 
 
 
-    //fix
-    //  const img2 = document.createElement("img");
-    //  img2.src = ops.r_1[r2];
-    //  document.body.appendChild(img2);
+    //set image in place (destroy after use)
+     const img1 = document.createElement("img");
+     const img2 = document.createElement("img");
+     const img3 = document.createElement("img");
+
+     img1.src = ops.r_1[r1];
+     img2.src = ops.r_1[r2];
+     img3.src = ops.r_1[r3];
     //  img2.style.position = "absolute";
     //  img2.style.width = 50;
     //  img2.style.height = 50;
     //  img2.style.left = 238;               //left: 238px;     margin-top: -460px;
     //  img2.style.marginTop = -460;
     //  img2.style.zIndex = 4;
+     os1.appendChild(img1);
+     os2.appendChild(img2);
+     os3.appendChild(img3);
+    
+    img1.setAttribute("width" ,50);    //one of my biggest issues was setting size and location
+    img1.setAttribute("height" ,50)     //instead of hiding and showing just creates new element in place of slot elements
+    img2.setAttribute("width" ,50);    
+    img2.setAttribute("height" ,50);
+    img3.setAttribute("width" ,50);    
+    img3.setAttribute("height" ,50);
+
+     
      
 
     // let source1 = document.createElement("img"),
@@ -196,7 +214,3 @@ randSlots();
 cheater.addEventListener("click", function(){ //+1 regardless of outcome
         checkVal.push(1);
 });
-
-// quitBtn.addEventListener("click", function(){
-
-// });
