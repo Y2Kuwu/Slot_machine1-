@@ -63,7 +63,7 @@ const init = checkVal.push(initVal);        //pushing initial value
 //alert(checkVal);                            //alert to check 0 index of array
 cred.innerHTML = checkVal;
 
-const checkSym = [];
+
 
 
 let spareSomeChange = "OUT OF CREDITS";  // make into element
@@ -75,6 +75,7 @@ function customerCreditScore(nt){
         alert(spareSomeChange);
     }
     else if(nt !== 0){
+
     }
 }
 const ops = {
@@ -84,8 +85,8 @@ const ops = {
 r1 : [shine , rock , coldBlood ,   tri,   ingot , dagger ],  //DELETE AND ADD ABOVE
 r2 : [shine , rock , coldBlood   , tri,   ingot , dagger ],
 r3 : [shine , rock , coldBlood   , tri,   ingot , dagger ],
-//r_1: ["shine" , "rock" , "coldBlood" , "cat" , "tri" , "scope" , "ingot" , "dagger" , "lord" , "lady" , "jest"],
-r_1: [shine1 , rock1 , coldBlood1  , tri1  , ingot1 , dagger1 ] //DELETE AND ADD ABOVE  WITHOUT QUOTES OBVIOUSLY
+//r_1: ["shine" , "rock" , "coldBlood" , "cat" , "tri" , "scope" , "ingot" , "dagger" , "lord" , "lady" , "jest"], // ADD BACK WHEN DONE WITH ASSETS
+r_1: [shine1 , rock1 , coldBlood1  , tri1  , ingot1 , dagger1 ] //DELETE 
 //r_2: ["shine" , "rock" , "coldBlood" , "cat" , "tri" , "scope" , "ingot" , "dagger" , "lord" , "lady" , "jest"],
 //r_3: ["shine" , "rock" , "coldBlood" , "cat" , "tri" , "scope" , "ingot" , "dagger" , "lord" , "lady" , "jest"],
 
@@ -177,8 +178,14 @@ function makeSymbolVis(r1, r2, r3){
 }
 makeSymbolVis(row1 , row2, row3);
 
-
-
+function deathAndRebirth(){
+    img1.remove();
+    img2.remove();
+    img3.remove();
+    return img1 , img2 , img3;
+}
+deathAndRebirth();
+let purgatory = deathAndRebirth();
 
 // let showSyms = rowManager.map(show => {
 // let li = document.createElement("li");  //createLiX3
@@ -189,6 +196,7 @@ makeSymbolVis(row1 , row2, row3);
 
 playBtn.addEventListener("click", ()=>{  //anon function after button push calls back to randSlots()
 randSlots();
+
     if(row1 == row2 && row3){ // triple
         alert("triple");
         checkVal.push(5);
@@ -202,6 +210,7 @@ randSlots();
         const newTot = checkVal.reduce((prev, curr) => prev + curr, 0);
         cred.innerHTML = newTot;
         customerCreditScore(newTot);
+        
     }
     else { //none
         alert("no match");
@@ -209,6 +218,7 @@ randSlots();
         const newTot = checkVal.reduce((prev, curr) => prev + curr, 0);
         cred.innerHTML = newTot;
         customerCreditScore(newTot);
+        
     }
 });
 cheater.addEventListener("click", function(){ //+1 regardless of outcome
