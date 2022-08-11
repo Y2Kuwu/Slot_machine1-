@@ -27,18 +27,20 @@ const lady = document.getElementById("queen");
 const jest = document.getElementById("jester");
 
 //img files
-const shine1 = document.getElementById("star1").src = "symbols_custom/star.jpg";  // to grab url and id into var
-const rock1 = document.getElementById("star1").src = "symbols_custom/diamon.jpg";  // to grab url and id into var
-const coldBlood1 = document.getElementById("star1").src = "symbols_custom/snek.jpg";  // to grab url and id into var
-const tri1 = document.getElementById("star1").src = "symbols_custom/pyramids.jpg";  // to grab url and id into var
-const ingot1 = document.getElementById("star1").src = "symbols_custom/goldBars.jpg";  // to grab url and id into var
-const dagger1 = document.getElementById("star1").src = "symbols_custom/daggers.jpg";  // to grab url and id into var
+const shine1 = document.getElementById("star1").src = "symbols_custom/star_updated.jpg";  // to grab url and id into var
+const rock1 = document.getElementById("diamond1").src = "symbols_custom/rock_updated.jpg";  // to grab url and id into var
+const coldBlood1 = document.getElementById("snake1").src = "symbols_custom/snek_updated.jpg";  // to grab url and id into var
+const tri1 = document.getElementById("pyramid1").src = "symbols_custom/pyramids_updated.jpg";  // to grab url and id into var
+const ingot1 = document.getElementById("goldBar1").src = "symbols_custom/gold_bars_updated.jpg";  // to grab url and id into var
+const dagger1 = document.getElementById("knife1").src = "symbols_custom/daggers_updated.png";  // to grab url and id into var
+
+//POTENTIALLY RESIZE ALL ABOVE COMING IN BEFORE PROCESSING
 
 // const shine1 = document.querySelector("star1");
 // const rock1 = document.querySelector("diamond1");
 // const coldBlood1 = document.querySelector("snake1");
 // const cat1 = document.querySelector("sphnix1");
-// const tri1 = document.querySelector("pyramid1");       //KEEP
+// const tri1 = document.querySelector("pyramid1");       //KEEP just in case
 // const scope1 = document.querySelector("eye1");
 // const ingot1 = document.querySelector("goldBar1");
 // const dagger1 = document.querySelector("knife1");
@@ -82,7 +84,7 @@ r1 : [shine , rock , coldBlood ,   tri,   ingot , dagger ],  //DELETE AND ADD AB
 r2 : [shine , rock , coldBlood   , tri,   ingot , dagger ],
 r3 : [shine , rock , coldBlood   , tri,   ingot , dagger ],
 //r_1: ["shine" , "rock" , "coldBlood" , "cat" , "tri" , "scope" , "ingot" , "dagger" , "lord" , "lady" , "jest"],
-r_1: [shine1 , rock1 , coldBlood1  , tri1  , ingot1 , dagger1 ] //DELETE AND ADD ABOVE
+r_1: [shine1 , rock1 , coldBlood1  , tri1  , ingot1 , dagger1 ] //DELETE AND ADD ABOVE  WITHOUT QUOTES OBVIOUSLY
 //r_2: ["shine" , "rock" , "coldBlood" , "cat" , "tri" , "scope" , "ingot" , "dagger" , "lord" , "lady" , "jest"],
 //r_3: ["shine" , "rock" , "coldBlood" , "cat" , "tri" , "scope" , "ingot" , "dagger" , "lord" , "lady" , "jest"],
 
@@ -120,10 +122,19 @@ function makeSymbolVis(r1, r2, r3){
     // img2.src = ops.r_1[r2];
     // document.appendChild(img2);
 
-     const img2 = document.createElement("img");
-     img2.src = ops.r_1[r2];
-     document.body.appendChild(img2);
-    
+
+
+    //fix
+    //  const img2 = document.createElement("img");
+    //  img2.src = ops.r_1[r2];
+    //  document.body.appendChild(img2);
+    //  img2.style.position = "absolute";
+    //  img2.style.width = 50;
+    //  img2.style.height = 50;
+    //  img2.style.left = 238;               //left: 238px;     margin-top: -460px;
+    //  img2.style.marginTop = -460;
+    //  img2.style.zIndex = 4;
+     
 
     // let source1 = document.createElement("img"),
     // containIt = document.getElementById(im2)
@@ -144,8 +155,12 @@ function makeSymbolVis(r1, r2, r3){
 
     //const rowReplace1 = document.createElement("img");
     //rowReplace1.src = ""
+    //return img2;
 }
 makeSymbolVis(row1 , row2, row3);
+
+
+
 
 // let showSyms = rowManager.map(show => {
 // let li = document.createElement("li");  //createLiX3
@@ -154,7 +169,7 @@ makeSymbolVis(row1 , row2, row3);
 // });
 //rowManager.append();
 
-playBtn.addEventListener("click", ()=>{  //find a way to refresh or empty arrays
+playBtn.addEventListener("click", ()=>{  //anon function after button push calls back to randSlots()
 randSlots();
     if(row1 == row2 && row3){ // triple
         alert("triple");
@@ -178,7 +193,7 @@ randSlots();
         customerCreditScore(newTot);
     }
 });
-cheater.addEventListener("click", function(){ //allows for loss without point reduction
+cheater.addEventListener("click", function(){ //+1 regardless of outcome
         checkVal.push(1);
 });
 

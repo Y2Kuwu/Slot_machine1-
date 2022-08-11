@@ -10,6 +10,17 @@
     margin-left: auto;
     margin-right: auto;
 }
+#face {
+    position: absolute;
+     max-width: 400px;
+     max-height: 400px;
+     display: block;
+     margin-left: auto;
+     margin-right: auto;
+     left: 60px;
+     margin-top: 45px;
+     z-index: 6;
+ }
 
 #playButton{
     position:relative;
@@ -124,46 +135,56 @@
 
 #star1{
     position:absolute;
-    margin-top: -460px;
+    margin-top: -480px;
     width: 50px;
     left: 150px;
     z-index: 2;
 }
 #diamond1{
     position:absolute;
-    margin-top: -460px;
+    margin-top: -480px;
     width: 50px;
     left: 150px;
     z-index: 2;
 }
 #snake1{
     position:absolute;
-    margin-top: -460px;
+    margin-top: -480px;
     width: 50px;
     left: 150px;
     z-index: 2;
 }
 #pyramid1{
     position:absolute;
-    margin-top: -460px;
+    margin-top: -480px;
     width: 50px;
     left: 150px;
     z-index: 2;
 }
 #goldBar1{
     position:absolute;
-    margin-top: -460px;
+    margin-top: -480px;
     width: 50px;
     left: 150px;
     z-index: 2;
 }
 #knife1{
     position:absolute;
-    margin-top: -460px;
+    margin-top: -480px;
     width: 50px;
     left: 150px;
     z-index: 2;
 }
+/* img{
+    position: "absolute";
+    width: 50px;
+    height: 50px;
+    left: 238px;             
+    margin-top: -460px;
+    z-index: 4;
+
+} */
+/* }
 #openSlot1{
     position:absolute;
     margin-top: -460px;
@@ -182,7 +203,7 @@
     height: 50px;
     left: 238px;
     /* background-color: blue; */
-    z-index: 4;
+    /* z-index: 4;
 }
 #openSlot3{
     position:absolute;
@@ -192,7 +213,7 @@
     left: 324px;
     background-color: red;
     z-index: 4;
-}
+}  */
 
 
 
