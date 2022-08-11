@@ -1,16 +1,17 @@
 
-//let isPlaying = false;          //bool for player validity
+
 //button list
 const playBtn = document.getElementById("playButton");
 const cheater = document.getElementById("cheatButton");
 const quitBtn = document.getElementById("quitButton")
 
-//let totCred = document.getElementById("credCounter");
+//current balance
 let cred = document.querySelector("#balance");
+
+//image slots
 let os1 = document.querySelector("#openSlot1");
 let os2 = document.querySelector("#openSlot2");
 let os3 = document.querySelector("#openSlot3");
-
 
 //attached symbols to be called/checked
 const shine = document.getElementById("star");
@@ -24,7 +25,7 @@ const dagger = document.getElementById("knife");
 const lord = document.getElementById("king");
 const lady = document.getElementById("queen");
 const jest = document.getElementById("jester");
-//
+
 //img files
 const shine1 = document.getElementById("star1");
 const rock1 = document.getElementById("diamond1");
@@ -70,7 +71,8 @@ const ops = {
 r1 : [shine , rock , coldBlood , cat , tri, scope , ingot , dagger , lord , lady , jest],  //created object to contain 3 identical
 r2 : [shine , rock , coldBlood , cat , tri, scope , ingot , dagger , lord , lady , jest],
 r3 : [shine , rock , coldBlood , cat , tri, scope , ingot , dagger , lord , lady , jest],
-r_1: ["shine" , "rock" , "coldBlood" , "cat" , "tri" , "scope" , "ingot" , "dagger" , "lord" , "lady" , "jest"],
+//r_1: ["shine" , "rock" , "coldBlood" , "cat" , "tri" , "scope" , "ingot" , "dagger" , "lord" , "lady" , "jest"],
+r_1: [shine1 , rock1 , coldBlood1 , cat1 , tri1 , scope1 , ingot1 , dagger1 , lord1 , lady1 , jest1],
 //r_2: ["shine" , "rock" , "coldBlood" , "cat" , "tri" , "scope" , "ingot" , "dagger" , "lord" , "lady" , "jest"],
 //r_3: ["shine" , "rock" , "coldBlood" , "cat" , "tri" , "scope" , "ingot" , "dagger" , "lord" , "lady" , "jest"],
 
@@ -85,16 +87,33 @@ function randSlots(){
 
 let randGive = randSlots(); // making universal 
 
-function makeSymbolVis(r1){
+function makeSymbolVis(r1, r2, r3){
     
+    //slots to change are :os1 os2 os3
     r1 = ops.r1.indexOf(row1);
-    alert(r1);
-    alert(ops.r_1[r1]);
+    r2 = ops.r2.indexOf(row2);
+    r3 = ops.r3.indexOf(row3);
+    //alert(r1);   //shows index
+    //alert(r2);
+    //alert(r3);
+    //alert(ops.r_1[r1]); shows element at r1 var index
+    //alert(ops.r_1[r1]);
+    //alert(ops.r_1[r2]);
+    //alert(ops.r_1[r3]);
+    const img2 = document.createElement("img");
+    img2.id = "imgSlot2";
+    const img2AddContent = document.createTextNode(ops.r_1[r2]);
+    img2.appendChild(img2AddContent);
+    const parentSpace2 = os2.parentNode;
+    parentSpace2.replaceChild(img2, os2);
+    
+   // img1.src = ops.r_1[r2];
+   // os2.appendChild(img2);
 
     //const rowReplace1 = document.createElement("img");
     //rowReplace1.src = ""
 }
-makeSymbolVis(row1);
+makeSymbolVis(row1 , row2, row3);
 
 // let showSyms = rowManager.map(show => {
 // let li = document.createElement("li");  //createLiX3
