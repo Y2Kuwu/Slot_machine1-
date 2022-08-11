@@ -27,17 +27,24 @@ const lady = document.getElementById("queen");
 const jest = document.getElementById("jester");
 
 //img files
-const shine1 = document.getElementById("star1");
-const rock1 = document.getElementById("diamond1");
-const coldBlood1 = document.getElementById("snake1");
-const cat1 = document.getElementById("sphnix1");
-const tri1 = document.getElementById("pyramid1");
-const scope1 = document.getElementById("eye1");
-const ingot1 = document.getElementById("goldBar1");
-const dagger1 = document.getElementById("knife1");
-const lord1 = document.getElementById("king1");
-const lady1 = document.getElementById("queen1");
-const jest1 = document.getElementById("jester1");
+const shine1 = document.getElementById("star1").src = "symbols_custom/star.jpg";  // to grab url and id into var
+const rock1 = document.getElementById("star1").src = "symbols_custom/diamon.jpg";  // to grab url and id into var
+const coldBlood1 = document.getElementById("star1").src = "symbols_custom/snek.jpg";  // to grab url and id into var
+const tri1 = document.getElementById("star1").src = "symbols_custom/pyramids.jpg";  // to grab url and id into var
+const ingot1 = document.getElementById("star1").src = "symbols_custom/goldBars.jpg";  // to grab url and id into var
+const dagger1 = document.getElementById("star1").src = "symbols_custom/daggers.jpg";  // to grab url and id into var
+
+// const shine1 = document.querySelector("star1");
+// const rock1 = document.querySelector("diamond1");
+// const coldBlood1 = document.querySelector("snake1");
+// const cat1 = document.querySelector("sphnix1");
+// const tri1 = document.querySelector("pyramid1");       //KEEP
+// const scope1 = document.querySelector("eye1");
+// const ingot1 = document.querySelector("goldBar1");
+// const dagger1 = document.querySelector("knife1");
+// const lord1 = document.querySelector("king1");
+// const lady1 = document.querySelector("queen1");
+// const jest1 = document.querySelector("jester1");
 //
 let row1;
 let row2;
@@ -68,11 +75,14 @@ function customerCreditScore(nt){
     }
 }
 const ops = {
-r1 : [shine , rock , coldBlood , cat , tri, scope , ingot , dagger , lord , lady , jest],  //created object to contain 3 identical
-r2 : [shine , rock , coldBlood , cat , tri, scope , ingot , dagger , lord , lady , jest],
-r3 : [shine , rock , coldBlood , cat , tri, scope , ingot , dagger , lord , lady , jest],
+// r1 : [shine , rock , coldBlood , cat , tri, scope , ingot , dagger , lord , lady , jest],  //created object to contain 3 identical
+// r2 : [shine , rock , coldBlood , cat , tri, scope , ingot , dagger , lord , lady , jest],
+// r3 : [shine , rock , coldBlood , cat , tri, scope , ingot , dagger , lord , lady , jest],
+r1 : [shine , rock , coldBlood ,   tri,   ingot , dagger ],  //DELETE AND ADD ABOVE
+r2 : [shine , rock , coldBlood   , tri,   ingot , dagger ],
+r3 : [shine , rock , coldBlood   , tri,   ingot , dagger ],
 //r_1: ["shine" , "rock" , "coldBlood" , "cat" , "tri" , "scope" , "ingot" , "dagger" , "lord" , "lady" , "jest"],
-r_1: [shine1 , rock1 , coldBlood1 , cat1 , tri1 , scope1 , ingot1 , dagger1 , lord1 , lady1 , jest1],
+r_1: [shine1 , rock1 , coldBlood1  , tri1  , ingot1 , dagger1 ] //DELETE AND ADD ABOVE
 //r_2: ["shine" , "rock" , "coldBlood" , "cat" , "tri" , "scope" , "ingot" , "dagger" , "lord" , "lady" , "jest"],
 //r_3: ["shine" , "rock" , "coldBlood" , "cat" , "tri" , "scope" , "ingot" , "dagger" , "lord" , "lady" , "jest"],
 
@@ -84,6 +94,8 @@ function randSlots(){
     //console.log(row1,row2,row3);    //to show match names in pres
     return row1 , row2 , row3;
 }
+
+
 
 let randGive = randSlots(); // making universal 
 
@@ -100,13 +112,33 @@ function makeSymbolVis(r1, r2, r3){
     //alert(ops.r_1[r1]);
     //alert(ops.r_1[r2]);
     //alert(ops.r_1[r3]);
-    const img2 = document.createElement("img");
-    img2.id = "imgSlot2";
-    const img2AddContent = document.createTextNode(ops.r_1[r2]);
-    img2.appendChild(img2AddContent);
-    const parentSpace2 = os2.parentNode;
-    parentSpace2.replaceChild(img2, os2);
+   // os2.setAttribute("style", "background-color:red;");
+    alert(ops.r_1[r2]);  //now grabbing by link
+
+
+    // const img2 = new Image(50,50);
+    // img2.src = ops.r_1[r2];
+    // document.appendChild(img2);
+
+     const img2 = document.createElement("img");
+     img2.src = ops.r_1[r2];
+     document.body.appendChild(img2);
     
+
+    // let source1 = document.createElement("img"),
+    // containIt = document.getElementById(im2)
+
+    // let i1 = ops.r_1[r2];
+    // const img2 = document.createElement("img");
+    // img2.id = "imgSlot2";
+    // const img2AddContent = document.createTextNode(i1);
+    // img2.appendChild(img2AddContent);
+    // const parentSpace2 = os2.parentNode;
+    // parentSpace2.replaceChild(img2, os2);
+    
+
+
+
    // img1.src = ops.r_1[r2];
    // os2.appendChild(img2);
 
