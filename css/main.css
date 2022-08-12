@@ -111,18 +111,25 @@
 }
 #balance{
     position: relative;
-    font-family: "Monoton";
+    font-family: "Oleo Script Swash Caps";
     font-size: 80px;
-    left: 800px;
+    text-align: center;
+    left: 700px;
     color: teal;
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    background-color: black;
+    display: inline-block;
 }
 #totalCredits{
     position: relative;
-    font-family: "Monoton";
+    font-family: "Oleo Script Swash Caps";
     font-size: 80px;
     left: 600px;
     margin: auto;
     color: maroon;
+    
 }
 #symNames{
 
@@ -178,7 +185,7 @@
 }
 #openSlot1{
     position:absolute;
-    margin-top: -320px;
+    margin-top: -300px;
     width: 50px;
     height: 50px;
     left: 150px;
@@ -189,7 +196,7 @@
 
  #openSlot2{
     position:absolute;
-    margin-top: -320px;
+    margin-top: -300px;
     width: 50px;
     height: 50px;
     left: 238px;
@@ -201,7 +208,7 @@
     position:absolute;
     height: 50px;
     width: 50px;
-    margin-top: -320px;
+    margin-top: -300px;
     left: 324px;
     background: transparent;
     border: none !important;
