@@ -14,6 +14,17 @@ let os1 = document.querySelector("#openSlot1");
 let os2 = document.querySelector("#openSlot2");
 let os3 = document.querySelector("#openSlot3");
 
+let os1_1 = document.querySelector("#openSlot1_1");
+let os2_2 = document.querySelector("#openSlot2_2");
+let os3_3 = document.querySelector("#openSlot3_3");
+
+
+
+let ro1;
+let ro2;
+let ro3;
+
+
 //attached symbols to be called/checked
 const shine = document.getElementById("star");
 const rock = document.getElementById("diamond");
@@ -35,7 +46,7 @@ const tri1 = document.getElementById("pyramid1").src = "symbols_custom/pyramids_
 const ingot1 = document.getElementById("goldBar1").src = "symbols_custom/gold_bars_updated.jpg";  
 const dagger1 = document.getElementById("knife1").src = "symbols_custom/daggers_updated.png";  
 
-
+//vars for storing ops' obj arrays as random
 let row1;
 let row2;
 let row3;
@@ -56,16 +67,18 @@ function customerCreditScore(nt){
         
         alert(spareSomeChange);
     }
+    else if (nt !== 0)
+    {
+        makeSymbolVis();
+    }
 }
 const ops = {
 // r1 : [shine , rock , coldBlood , cat , tri, scope , ingot , dagger , lord , lady , jest],  //created object to contain 3 identical
-// r2 : [shine , rock , coldBlood , cat , tri, scope , ingot , dagger , lord , lady , jest],
-// r3 : [shine , rock , coldBlood , cat , tri, scope , ingot , dagger , lord , lady , jest],
-r1 : [shine , rock , coldBlood ,   tri,   ingot , dagger ],  //DELETE AND ADD ABOVE
-r2 : [shine , rock , coldBlood   , tri,   ingot , dagger ],
-r3 : [shine , rock , coldBlood   , tri,   ingot , dagger ],
-//r_1: ["shine" , "rock" , "coldBlood" , "cat" , "tri" , "scope" , "ingot" , "dagger" , "lord" , "lady" , "jest"], // ADD BACK WHEN DONE WITH ASSETS
-r_1: [shine1 , rock1 , coldBlood1  , tri1  , ingot1 , dagger1 ] //DELETE 
+r1 : [shine , rock , coldBlood , tri , ingot , dagger ],  //USE ABOVE WHEN ALL ASSETS COMPLETE
+r2 : [shine , rock , coldBlood , tri , ingot , dagger ],
+r3 : [shine , rock , coldBlood , tri , ingot , dagger ],
+//r_1: ["shine" , "rock" , "coldBlood" , "cat" , "tri" , "scope" , "ingot" , "dagger" , "lord" , "lady" , "jest"], // USE WHEN ALL ASSETS COMPLETE
+r_1: [shine1 , rock1 , coldBlood1  , tri1  , ingot1 , dagger1 ]
 
 
 };
@@ -74,7 +87,6 @@ function randSlots(){
     row2 = ops["r2"][Math.floor(Math.random()*ops["r2"].length)];
     row3 = ops["r3"][Math.floor(Math.random()*ops["r3"].length)];
     //console.log(row1,row2,row3);    //to show match names in pres
-    return row1 , row2 , row3;
 }
 
 let randGive = randSlots(); // making universal 
@@ -93,7 +105,7 @@ function makeSymbolVis(r1, r2, r3){
     //alert(ops.r_1[r2]);  //GRABS BY NAME/ PATH
 
     //set image in place (destroy after use)
-     
+    
      const img1 = document.createElement("img");
      const img2 = document.createElement("img");
      const img3 = document.createElement("img");
@@ -114,7 +126,6 @@ function makeSymbolVis(r1, r2, r3){
     img2.setAttribute("height" ,50);
     img3.setAttribute("width" ,50);    
     img3.setAttribute("height" ,50);
-    
 }
 let vision = makeSymbolVis();  //changing scope
 
