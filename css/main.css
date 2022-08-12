@@ -176,19 +176,9 @@
     left: 150px;
     z-index: 2;
 }
-/* img{
-    position: "absolute";
-    width: 50px;
-    height: 50px;
-    left: 238px;             
-    margin-top: -460px;
-    z-index: 4;
-
-} */
-
 #openSlot1{
     position:absolute;
-    margin-top: -500px;
+    margin-top: -320px;
     width: 50px;
     height: 50px;
     left: 150px;
@@ -199,7 +189,7 @@
 
  #openSlot2{
     position:absolute;
-    margin-top: -500px;
+    margin-top: -320px;
     width: 50px;
     height: 50px;
     left: 238px;
@@ -211,7 +201,7 @@
     position:absolute;
     height: 50px;
     width: 50px;
-    margin-top: -500px;
+    margin-top: -320px;
     left: 324px;
     background: transparent;
     border: none !important;
@@ -231,74 +221,3 @@
 
 
 
-/* #matchName1{
-    position: relative;
-    font-size: 40px;
-    left: 800px;
-    color: teal;
-    z-index: 5;
-}
-#matchName2{
-    position: relative;
-    font-size: 40px;
-    left: 800px;
-    color: teal;
-    z-index: 5;
-}
-#matchName3{
-    position: relative;
-    font-size: 40px;
-    left: 800px;
-    color: teal;
-    z-index: 5;
-} */
-
-
-
-
-
-/* #play{
-    position:relative;
-    max-width: 45px;
-    max-height: 45px;
-    left: 40px;
-    z-index: 1;
-    
-} */
-
-
-
-/* body{
-    position: relative;
-    margin: auto;
-    z-index: 1;
-    margin-left: auto;
-    margin-right: auto;
-} */
-/* .funcButtons{
-    position: absolute;
-    margin: auto;
-    max-width: 200px;
-    max-height: 200px;
-    z-index: 2;
-} */
-/* .colors{
-    position: absolute;
-    margin: auto;
-    max-width: 200px;
-    max-height: 200px;
-    z-index: 2;
-}  */
-
-
-
-
-/* .boxBg{
-    position: absolute;
-    width: 700px;
-    height: 600px;
-    left: 600px;
-    background-color: black;
-    z-index: -1;
-
-} */
