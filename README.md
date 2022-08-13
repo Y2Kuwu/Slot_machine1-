@@ -36,16 +36,13 @@ Creating elements and appending appropriatly, better understanding of concept no
 Overcomplicating steps.
 Prioritizing elements appropriately and initial structure.
 Some issues layering images png vs. jpg
-Had a way to generate new visible play combos, deleted code..
+
 
 Future commits, fixes, and enhancements will include:
 -Toggled lights upon win , lose , or idle before play
 -Sound effects for button presses and handle (arm) pulls
 -Feature to add rarely called bonus column(end column on right)
 -Spinning effect of symbols
--Images not updating, may have deleted the lines for that.
-
--*if not complete* Symbols are replaced by new
 
 Resources used:
 MDN, stackOverflow, w3schools, notes
