@@ -11,6 +11,8 @@ let os1 = document.querySelector("#openSlot1");
 let os2 = document.querySelector("#openSlot2");
 let os3 = document.querySelector("#openSlot3");
 
+let gameOver = document.querySelector("#houseAlwaysWins");
+gameOver.style.visibility = 'hidden';
 
 
 //attached symbols to be called/checked
@@ -43,6 +45,8 @@ let i1;
 let i2;
 let i3;
 
+
+
 //setting value tracker as array
 const initVal = cred.append = 5;            //setting initial value
 const checkVal = [];                        //creating empty array
@@ -54,15 +58,26 @@ cred.innerHTML = checkVal;
 let spareSomeChange = "OUT OF CREDITS";  // make into element
 
 
+let pull = new Audio("sound_FX/pulling-chain-43770.mp3");
+let very_win = new Audio("sound_FX/very_good.m4v");  
+let hory = new Audio("sound_FX/hory_shid.m4v");
+let lose = new Audio("sound_FX/loser.m4v")
+
 function customerCreditScore(nt){  
     if(nt === 0){
         
         alert(spareSomeChange);
+        playBtn.disabled = true;
+        gameOver.style.visibility = 'visible';
+
+  
     }
     else if (nt !== 0)
     {
         destroy(i1,i2,i3);
         makeSymbolVis();
+        gameOver.style.visibility = 'hidden';
+
     }
 }
 const ops = {
@@ -134,39 +149,37 @@ function destroy(ii1,ii2,ii3){
     os3.removeChild(ii3);
 };
 
+
+
 playBtn.addEventListener("click", ()=>{  //arrow function after button push calls back to randSlots()
+pull.play();
 
-
-    if(row1 == row2 && row3){ // triple
+    if(row1 == row2 && row2 == row3){ // triple
         alert("triple");
         checkVal.push(5);
         const newTot = checkVal.reduce((prev, curr) => prev + curr, 0);
         cred.innerHTML = newTot;
-        
+        hory.play();
         customerCreditScore(newTot);
-        
     }
-    else if(row1 == row2 || row1 == row3 || row2 == row3){ //double
+    else if(row1 == row2 || row2 == row3 || row1 == row3){ //double
         alert("double");
         checkVal.push(1);
         const newTot = checkVal.reduce((prev, curr) => prev + curr, 0);
         cred.innerHTML = newTot;
-        
+        very_win.play();
         customerCreditScore(newTot);
-        
-        
     }
     else { //none
         alert("no match");
         checkVal.push(-1);
         const newTot = checkVal.reduce((prev, curr) => prev + curr, 0);
         cred.innerHTML = newTot;
-       
-        customerCreditScore(newTot);
-        
-        
+        lose.play();
+        customerCreditScore(newTot); 
     }
 });
+
 
 
 cheater.addEventListener("click", function(){ //+1 regardless of outcome

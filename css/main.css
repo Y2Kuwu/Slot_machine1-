@@ -66,6 +66,17 @@
     left: 80px;
     z-index: 3;
 }
+#houseAlwaysWins {
+    
+    position:absolute;
+    width: 66px;
+    height: 180px;
+    margin-top: -79px;
+    left: 78px;
+    z-index: 6;
+}
+
+
 /* #win1 { */
     /* render again elsewhere */
     /* position:absolute;
